@@ -11,7 +11,7 @@ const WeatherSearch = ({ weatherInput, setWeatherInput, weather, setWeather }) =
 
     const searchWeather = e => {
 
-        axios.get(`http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHERAPI}&q=${weatherInput}`)
+        axios.get(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHERAPI}&q=${weatherInput}`)
         .then(response => {
             setWeather(response.data);
         })
