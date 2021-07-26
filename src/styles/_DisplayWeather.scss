@@ -1,0 +1,46 @@
+.display-weather {
+    @include flex;
+    padding-top: 2rem;
+
+    .weather-card {
+        width: 20%;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        box-shadow: 0px 8px 15px 6px rgba(0,0,0,0.2);
+        transition: all 0.5s ease;
+
+        &:hover {
+            box-shadow: 0 8px 13px 0 rgba(0,0,0,0.2);
+            transition: all 0.5s ease;
+        }
+
+        .weather-degrees {
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            padding-bottom: .2rem;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .display-weather {
+
+        .weather-card {
+            width: 80vw;
+
+            .weather-degrees {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1rem;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+@mixin flexNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@import './NavBar';
+@import './Displayweather';
+@import './WeatherSearch';

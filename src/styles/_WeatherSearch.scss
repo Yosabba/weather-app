@@ -1,0 +1,82 @@
+.weather-search {
+    @include flex;
+    width: 100%;
+
+
+
+    p {
+        font-size: 1rem;
+        padding-bottom: .5rem;
+    }
+
+    button {
+        padding: .5rem;
+        border: none;
+        cursor: pointer;
+        background: rgb(251,202,98);
+        background: linear-gradient(90deg, rgba(251,202,98,1) 0%, rgba(253,190,135,1) 46%);
+        border-radius: 5px;
+        transition: all 0.5s ease-in;
+
+
+
+        &:hover {
+            border-radius: 8px;
+            background: rgb(251,202,98);
+            background: linear-gradient(90deg, rgba(251, 202, 98, 0.418) 0%, rgba(253,190,135,0.418) 46%);
+            transition: all 0.5s ease-in;
+        }
+    }
+
+    input {
+        border: none;  
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearnce: none;
+        appearance: none;
+        background-color: rgb(223, 223, 223);
+        border-radius: 3px;
+        width: 10%;
+        outline: none;
+        text-align: left;
+        color: rgb(56, 56, 56);
+        padding: 10px 10px;
+        
+    }
+
+    input:focus::placeholder {
+        color: transparent;
+    }
+
+    input::placeholder {
+        color: rgb(124, 124, 124);
+        transition: color 0.5s ease;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .weather-search {
+
+
+        input {
+            width: 35vw;
+        }
+
+        input::placeholder {
+            font-size: .7rem;
+        }
+        
+        p {
+            font-size: .8rem;
+        }
+
+        button {
+            font-size: .7rem;
+        }
+    }
+
+
+
+    
+}

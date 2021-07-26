@@ -1,0 +1,36 @@
+.navbar {
+    @include flexNav;
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+
+    img {
+        width: 5%;
+        align-self: center;
+        margin-top: 2rem;
+        
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar {
+        width: 90vw;
+
+        img {
+            width: 5rem;
+
+        }
+
+        h1 {
+            font-size: 1rem;
+            font-weight: 500;
+            
+            
+        }
+    }
+
+
+
+    
+}
