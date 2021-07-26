@@ -13,7 +13,6 @@ const WeatherSearch = ({ weatherInput, setWeatherInput, weather, setWeather }) =
 
         axios.get(`http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHERAPI}&q=${weatherInput}`)
         .then(response => {
-            console.log(response)
             setWeather(response.data);
         })
         .catch( error => console.error(error))
