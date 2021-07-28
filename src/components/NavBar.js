@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logo from "../sunny.svg";
-import SvgLogo from "./svgLogo";
 
 const NavBar = () => {
   const navAnimation = {
@@ -18,26 +16,26 @@ const NavBar = () => {
   const panAnimation = {
     visible: {
       x: 0,
-      pathlength: 1,
+      pathLength: 1,
       opacity: 1,
       transition: { delay: 1, duration: 2, ease: "easeIn" },
     },
     hidden: {
       x: -550,
-      pathlength: 0,
+      pathLength: 0,
     },
   };
 
   const cloudAnimation = {
     visible: {
       x: 0,
-      pathlength: 1,
+      pathLength: 1,
       opacity: 1,
       transition: { duration: 2, delay: 1, ease: "easeIn" },
     },
     hidden: {
       x: 550,
-      pathlength: 0,
+      pathLength: 0,
     },
   };
 
@@ -65,8 +63,8 @@ const NavBar = () => {
             y1="377.565"
             y2="134.435"
           >
-            <stop offset=".015" stop-color="#f9cd55" />
-            <stop offset="1" stop-color="#fdbc8c" />
+            <stop offset=".015" stopColor="#f9cd55" />
+            <stop offset="1" stopColor="#fdbc8c" />
           </linearGradient>
           <linearGradient
             id="New_Gradient_Swatch_28"
@@ -76,8 +74,8 @@ const NavBar = () => {
             y1="194.752"
             y2="77.248"
           >
-            <stop offset=".015" stop-color="#b7bfd8" />
-            <stop offset="1" stop-color="#e4f2ee" />
+            <stop offset=".015" stopColor="#b7bfd8" />
+            <stop offset="1" stopColor="#e4f2ee" />
           </linearGradient>
           <linearGradient
             id="New_Gradient_Swatch_28-2"
