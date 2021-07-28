@@ -1,36 +1,31 @@
 .navbar {
-    @include flexNav;
-    font-size: 1.5rem;
-    padding-bottom: 4rem;
+  @include flexNav;
+  font-size: 1.5rem;
+  margin-top: -10%;
 
-    img {
-        width: 5%;
-        align-self: center;
-        margin-top: 2rem;
-        
-    }
-
-
+  svg {
+    width: 20%;
+    align-self: center;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .navbar {
-        width: 90vw;
+  .navbar {
+    width: 90vw;
 
-        img {
-            width: 5rem;
-
-        }
-
-        h1 {
-            font-size: 1rem;
-            font-weight: 500;
-            
-            
-        }
+    img {
+      width: 5rem;
     }
 
+    svg {
+      height: 30vh;
+      display: block;
+      width: 20vw;
+    }
 
-
-    
+    h1 {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
 }

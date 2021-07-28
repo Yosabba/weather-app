@@ -4,9 +4,12 @@ import { motion } from 'framer-motion';
 const DisplayWeather = ({ weather }) => {
 
     const DisplayAnimation = {
-        visible: { opacity: 1, x: 0, transition : { duration: 0.5, ease: "easeIn"} },
-        hidden: { opacity: 0, x: 1000 },
-    }
+      visible: {
+        opacity: 1,
+        transition: { duration: 0.5, ease: "easeIn" },
+      },
+      hidden: { opacity: 0 },
+    };
 
 
     return (

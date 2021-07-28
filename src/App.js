@@ -2,6 +2,7 @@ import NavBar from './components/NavBar';
 import WeatherSearch from './components/WeatherSearch';
 import DisplayWeather from './components/DisplayWeather';
 import { useState } from 'react';
+import { SvgIcon } from '@material-ui/core';
 
 
 function App() {
