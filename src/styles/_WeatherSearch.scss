@@ -15,7 +15,7 @@
         cursor: pointer;
         background: rgb(251,202,98);
         background: linear-gradient(90deg, rgba(251,202,98,1) 0%, rgba(253,190,135,1) 46%);
-        border-radius: 5px;
+        border-radius: 1px;
         transition: all 0.5s ease-in;
 
 
@@ -23,7 +23,7 @@
         &:hover {
             border-radius: 8px;
             background: rgb(251,202,98);
-            background: linear-gradient(90deg, rgba(251, 202, 98, 0.418) 0%, rgba(253,190,135,0.418) 46%);
+            background: linear-gradient(90deg, rgba(251, 202, 98,1) 0%, rgba(253, 190, 135, 1) 46%);
             transition: all 0.5s ease-in;
         }
     }

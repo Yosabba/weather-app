@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { motion } from 'framer-motion';
+
 
 
 const WeatherSearch = ({ weatherInput, setWeatherInput, weather, setWeather }) => {
@@ -7,6 +9,11 @@ const WeatherSearch = ({ weatherInput, setWeatherInput, weather, setWeather }) =
     const handleChange = (e) => {
        setWeatherInput(e.target.value);
        
+    }
+
+    const Animation = {
+        visible: { opacity: 1, transition : { duration: 1} },
+        hidden: { opacity: 0 },
     }
 
     const searchWeather = e => {
@@ -21,8 +28,13 @@ const WeatherSearch = ({ weatherInput, setWeatherInput, weather, setWeather }) =
     }
 
     return (
-        <>
-            
+        <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={Animation}
+
+        >
+
             {weather ? (
                 <section className="weather-search">
                     <p>Enter Zip Code, City or State</p>
@@ -37,7 +49,7 @@ const WeatherSearch = ({ weatherInput, setWeatherInput, weather, setWeather }) =
                 </section>
             )}
 
-        </>
+        </motion.div>
     );
 }
 
