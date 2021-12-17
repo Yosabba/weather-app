@@ -1,15 +1,8 @@
 import NavBar from "./components/NavBar.jsx";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import {
-  Heading,
-  SimpleGrid,
-  Box,
-  Flex,
-  Skeleton,
-} from "@chakra-ui/react";
+import { Heading, SimpleGrid, Box, Skeleton } from "@chakra-ui/react";
 import DisplayWeeklyForecast from "./components/DisplayWeeklyForecast.jsx";
-import SvgLogo from "./components/SvgLogo.jsx";
 import {
   SunriseSunset,
   UvIndex,
@@ -58,25 +51,6 @@ function App() {
 
   return (
     <Box pb="2rem">
-      <Flex
-        ml={["0", "25%", "25%", "22%", "18%"]}
-        justify="center"
-        direction="row"
-        align="center"
-      >
-        <SvgLogo />
-        <Heading
-          fontSize={["1rem", "1.5rem", "3rem", "3rem", "3rem"]}
-          align="center"
-          mx="2rem"
-          fontWeight="600"
-          whiteSpace="nowrap"
-          textTransform="uppercase"
-        >
-          Wibzy
-        </Heading>
-      </Flex>
-
       <NavBar
         currentWeather={currentWeather}
         setCurrentWeather={setCurrentWeather}
@@ -86,7 +60,7 @@ function App() {
         currentLocation={currentLocation}
         setCurrentLocation={setCurrentLocation}
       />
-      
+
       <Box ml={["0", "0", "25%", "22%", "18%"]} mr="0.9rem">
         {/* Weekly forecast begins */}
         <Heading
@@ -110,7 +84,7 @@ function App() {
           ) : (
             <>
               {[...Array(8)].map((_, index) => (
-                <Box index={index}>
+                <Box key={index}>
                   <Skeleton height="100px" />
                 </Box>
               ))}
@@ -145,7 +119,7 @@ function App() {
           ) : (
             <>
               {[...Array(6)].map((_, index) => (
-                <Box index={index}>
+                <Box key={index}>
                   <Skeleton height="100px" />
                 </Box>
               ))}

@@ -1,14 +1,12 @@
-import {
-  Flex,
-  Heading,
-  Text,
-  Image,
-  Box
-} from "@chakra-ui/react";
+import { Flex, Heading, Text, Image, Box } from "@chakra-ui/react";
 import City from "../Images/city.jpg";
+import Rain from "../Images/raining.png";
+import Snowy from "../Images/snowing.png";
+import Storm from "../Images/storm.png";
+import Clouds from "../Images/cloudy-day.png";
+import Sun from "../Images/sun.png";
 
-const DisplayWeather = ({ currentWeather, currentLocation, isDataFetched }) => {
-
+const DisplayWeather = ({ currentWeather, currentLocation }) => {
   const unixToDate = (unixTime) => {
     const days = [
       "Sunday",
@@ -25,6 +23,25 @@ const DisplayWeather = ({ currentWeather, currentLocation, isDataFetched }) => {
     return day;
   };
 
+  const iconToImage = (icon) => {
+    switch (icon) {
+      case "Clouds":
+        return Clouds;
+      case "Rain":
+        return Rain;
+      case "Snow":
+        return Snowy;
+      case "Thunderstom":
+        return Storm;
+      case "Drizzle":
+        return "https://cdn.pixabay.com/photo/2016/11/29/05/36/sun-1867461_960_720.png";
+      case "Clear":
+        return Sun;
+      default:
+        return "https://cdn.pixabay.com/photo/2016/11/29/05/36/sun-1867461_960_720.png";
+    }
+  };
+
   const unixToTime = (unixTime) => {
     const date = new Date(unixTime * 1000);
     const time = new Intl.DateTimeFormat("en-US", {
@@ -34,22 +51,15 @@ const DisplayWeather = ({ currentWeather, currentLocation, isDataFetched }) => {
     return time;
   };
 
-  const removeUnderscores = (city) => {
-    const cityArray = city.split("_");
-    const cityName = cityArray.join(" ");
-
-    return cityName;
-  };
-
   return (
     <Flex direction="column" justify="center" align="center">
-      <Heading as="h1" fontSize="4rem" fontWeight="300">
+      <Heading as="h1" fontSize="5rem" fontWeight="300">
         {currentWeather.temp.toFixed(0)}°
       </Heading>
 
       <Image
-        src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`}
-        alt=""
+        src={iconToImage(currentWeather.weather[0].main)}
+        alt="Weather Icon"
         boxSize="80px"
       />
 
@@ -74,10 +84,9 @@ const DisplayWeather = ({ currentWeather, currentLocation, isDataFetched }) => {
         boxShadow="inset 0 0 0 1000px #0000008b;"
       >
         <Text color="white" mt="0.5rem">
-          {removeUnderscores(currentLocation)}
+          {currentLocation}
         </Text>
       </Box>
-
     </Flex>
   );
 };
