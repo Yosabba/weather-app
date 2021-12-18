@@ -5,6 +5,9 @@ import Snowy from "../Images/snowing.png";
 import Storm from "../Images/storm.png";
 import Clouds from "../Images/cloudy-day.png";
 import Sun from "../Images/sun.png";
+import Wind from "../Images/wind.png";
+import Mist from "../Images/mist.png";
+import Fog from "../Images/fog.png";
 
 const DisplayWeather = ({ currentWeather, currentLocation }) => {
   const unixToDate = (unixTime) => {
@@ -34,11 +37,15 @@ const DisplayWeather = ({ currentWeather, currentLocation }) => {
       case "Thunderstom":
         return Storm;
       case "Drizzle":
-        return "https://cdn.pixabay.com/photo/2016/11/29/05/36/sun-1867461_960_720.png";
+        return Rain;
       case "Clear":
         return Sun;
+      case "Mist":
+        return Mist;
+      case "Fog":
+        return Fog;
       default:
-        return "https://cdn.pixabay.com/photo/2016/11/29/05/36/sun-1867461_960_720.png";
+        return Wind;
     }
   };
 
