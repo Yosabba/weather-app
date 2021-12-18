@@ -4,4 +4,4 @@ Wibzy is a simple weather forecast app. It uses OpenWeatherMap APIs to fetch 8 d
 # Screen Shots
 
 
-![Screenshot 2021-12-17 202008](https://user-images.githubusercontent.com/85464248/146630427-2fa29962-6188-4f1a-8fa5-724d8af64ede.png)
+![Screenshot 2021-12-18 005622](https://user-images.githubusercontent.com/85464248/146631082-3710c8df-e2c0-4006-a913-7ba963847907.png)
